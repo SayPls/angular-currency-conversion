@@ -1,0 +1,18 @@
+
+<div class="container-convert">
+  <img src="assets/foreign-currency-exchange-svgrepo-com.svg" alt="svg">
+</div>
+
+<h2>
+  Current exchange rate for UAH:
+</h2>
+
+<h2>
+  {{currentUsdRate.conversion_rate | currency: 'USD'}}
+  {{currentEurRate.conversion_rate | currency: 'EUR'}}
+</h2>
+
+<div class="container-convert">
+  <app-converter (currencyChanged)="loadRate($event)" [rate]="rate"></app-converter>
+</div>
+
